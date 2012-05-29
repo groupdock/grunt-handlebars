@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
     handlebars: {
       all: {
-        src: ['fixtures/*.handlebars'],
+        src: 'fixtures',
         dest: 'fixtures/output/templates.js'
       }
     }

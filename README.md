@@ -23,13 +23,13 @@ grunt.loadNpmTasks('grunt-handlebars');
 grunt.initConfig({
   handlebars: {
     all: {
-      src: ['templates/nav.handlebars', 'templates/*.handlebars'],
+      src: 'templates',
       dest: 'js/templates.js'
     }
   }
 });
 ``` 
-
+Note: src should point to the templates directory which contains the *.handlebars files.
 
 ## Release History
 
