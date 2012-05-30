@@ -4,7 +4,7 @@ Grunt task for precompiling Handlebars template.
 
 ## Getting Started
 
-Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-contrib`
+Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-handlebars`
 
 Then add this line to your project's `grunt.js` gruntfile:
 

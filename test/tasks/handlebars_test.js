@@ -1,13 +1,16 @@
 var assert = require('assert'),
     grunt = require('grunt'),
     path = require('path'),
-    fs = require('fs')
+    fs = require('fs');
 
 describe('Handlebars', function() {
 
   beforeEach(function(done) {
     if (!path.existsSync("test/fixtures/output")) {
       fs.mkdirSync("test/fixtures/output");
+    }
+    if (path.existsSync("test/fixtures/output/templates.js")) {
+      fs.unlinkSync("test/fixtures/output/templates.js");
     }
     grunt.utils.spawn({
       cmd: "grunt",
