@@ -33,7 +33,8 @@ Note: src should point to the templates directory which contains the *.handlebar
 
 ## Release History
 
-* May 29, 2012 - First release 0.0.1
+* May 30, 2012 - 0.0.2 Minor fixes
+* May 29, 2012 - 0.0.1 First release
 
 ## License
 
