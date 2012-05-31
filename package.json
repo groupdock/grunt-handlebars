@@ -4,7 +4,7 @@
   "description": "Grunt task for precompiling Handlebars template.",
   "version": "0.0.2",
   "repository": {
-    "type": "git"
+    "type": "git",
     "url": "git://github.com/groupdock/grunt-handlebars.git"
   },
   "engines": {

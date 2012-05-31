@@ -1,2 +1,3 @@
 node_modules
 test/fixtures/output/templates.js
+npm-debug.log
