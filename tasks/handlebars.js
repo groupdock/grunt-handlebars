@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
     var run = libc.system;
 
-    var handlebarsCmd = 'handlebars -m ' + templateDir + '/*.handlebars -f ' + this.file.dest;
+    var handlebarsCmd = __dirname + '../node_modules/.bin/handlebars -m ' + templateDir + '/*.handlebars -f ' + this.file.dest;
     run(handlebarsCmd);
   });
 };
