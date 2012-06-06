@@ -16,7 +16,7 @@ describe('Handlebars', function() {
       cmd: "grunt",
       args: ["--config", "test/grunt.js", "handlebars"]
     }, function(err, result) {
-      assert.ifError(err)
+      assert.ifError(err);
       console.log(result.stderr);
       console.log(result.stdout);
       done();
@@ -31,7 +31,7 @@ describe('Handlebars', function() {
       html: 'http://news.ycombinator.com',
       src: [handlebarsJS, templatesJS],
       done: function(err, window) {
-        assert.ifError(err)
+        assert.ifError(err);
         assert.ok(window.Handlebars);
         assert.ok(window.Handlebars.templates);
         assert.ok(window.Handlebars.templates.header);
