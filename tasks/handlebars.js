@@ -8,19 +8,13 @@
 
 module.exports = function(grunt) {
 
-  var FFI = require("node-ffi");
+  var exec = require('child_process').exec;
 
   grunt.registerMultiTask('handlebars', 'Precompile Handlebars template', function() {
     var self = this;
     var templateDir = this.file.src;
 
-    var libc = new FFI.Library(null, {
-      "system": ["int32", ["string"]]
-    });
-
-    var run = libc.system;
-
     var handlebarsCmd = __dirname + '/../node_modules/.bin/handlebars -m ' + templateDir + '/*.handlebars -f ' + this.file.dest;
-    run(handlebarsCmd);
+    exec(handlebarsCmd);
   });
 };
