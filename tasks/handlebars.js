@@ -16,6 +16,11 @@ module.exports = function(grunt) {
     var templateDir = this.file.src;
 
     var handlebarsCmd = __dirname + '/../node_modules/.bin/handlebars -m ' + templateDir + '/*.handlebars -f ' + this.file.dest;
-    exec(handlebarsCmd, done);
+    exec(handlebarsCmd, function(err, stdout, stderr) {
+      if (err) {
+        grunt.fail.fatal(stderr);
+      }
+      done();
+    });
   });
 };
