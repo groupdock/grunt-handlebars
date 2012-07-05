@@ -4,12 +4,12 @@ var assert = require('assert'),
     fs = require('fs');
 
 describe('Handlebars', function() {
-
+  var existsSync = fs.existsSync || path.existsSync
   beforeEach(function(done) {
-    if (!path.existsSync("test/fixtures/output")) {
+    if (!existsSync("test/fixtures/output")) {
       fs.mkdirSync("test/fixtures/output");
     }
-    if (path.existsSync("test/fixtures/output/templates.js")) {
+    if (existsSync("test/fixtures/output/templates.js")) {
       fs.unlinkSync("test/fixtures/output/templates.js");
     }
     grunt.utils.spawn({
