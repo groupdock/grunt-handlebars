@@ -4,7 +4,7 @@ var assert = require('assert'),
     fs = require('fs');
 
 describe('Handlebars', function() {
-  var existsSync = fs.existsSync || path.existsSync
+  var existsSync = fs.existsSync || fs.existsSync
   beforeEach(function(done) {
     if (!existsSync("test/fixtures/output")) {
       fs.mkdirSync("test/fixtures/output");
