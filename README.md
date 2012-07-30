@@ -33,6 +33,7 @@ Note: src should point to the templates directory which contains the *.handlebar
 
 ## Release History
 
+* July 30, 2012 - 0.0.6 Revert to handlebars 1.0.5beta
 * July 30, 2012 - 0.0.5 Works on node 0.8, task failure on cmd failure, updated handlebars
 * June 14, 2012 - 0.0.4 Fix task by making it asynchronous
 * June 14, 2012 - 0.0.3 Bug Fix + removed dependency on node-ffi

@@ -2,7 +2,7 @@
   "author": "Luc Castera <lcastera@intellum.com>",
   "name": "grunt-handlebars",
   "description": "Grunt task for precompiling Handlebars template.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "git://github.com/groupdock/grunt-handlebars.git"
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "grunt": "~0.3.10",
-    "handlebars": "~1.0.6"
+    "handlebars": "1.0.5beta"
   },
   "devDependencies": {
     "mocha": "~1.2.1",
