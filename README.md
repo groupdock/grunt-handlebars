@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/groupdock/grunt-handlebars.png)](http://travis-ci.org/groupdock/grunt-handlebars)
 # grunt-handlebars
 
 Grunt task for precompiling Handlebars template.
