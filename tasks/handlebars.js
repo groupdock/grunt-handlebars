@@ -15,8 +15,21 @@ module.exports = function(grunt) {
     var done = self.async();
     var templateDir = this.file.src;
     var truncateFileCmd = '> ' +this.file.dest;
+
     var handlebarsCmd = __dirname + '/../node_modules/.bin/handlebars -m ' + templateDir + '/*.handlebars -f ' + this.file.dest;
-    exec(truncateFileCmd +' && '+ handlebarsCmd, function(err, stdout, stderr) {
+
+    // Check on which platform node is running.
+    var finalCmd;
+    if (process.platform == "win32") {
+      // win32 cmd doesn't know what "&&" is and is also not able to use wildcards
+      // anyway this will match all the files in the template dir anyway.
+      finalCmd =  __dirname + '/../node_modules/.bin/handlebars -m ' + templateDir + '/ -f ' + this.file.dest;
+    } else {
+      // others platform, set to the default command
+      finalCmd = truncateFileCmd +' && '+ handlebarsCmd;
+    }
+
+    exec(finalCmd, function(err, stdout, stderr) {
       if (err) {
         grunt.fail.fatal(stderr);
       }
