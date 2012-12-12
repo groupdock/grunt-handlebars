@@ -6,6 +6,7 @@ module.exports = function(grunt) {
       all: {
         src: 'fixtures',
         dest: 'fixtures/output/templates.js'
+        //amd:true
       }
     }
   });
